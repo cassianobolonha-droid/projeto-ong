@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Amigos do Bem</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>ONG Amigos do Bem</h1>
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icone">☰</label>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Quem Somos</h2>
+            <img src="imagens/ong.jpg" alt="Voluntários da ONG distribuindo alimentos para famílias em uma comunidade">
+            <p>Somos uma organização sem fins lucrativos dedicada a transformar a vida de famílias em situação de vulnerabilidade social, por meio de projetos de alimentação, educação e capacitação profissional.</p>
+        </section>
+
+        <section>
+            <h2>Nossa Missão</h2>
+            <p>Promover dignidade e oportunidades, unindo doadores e voluntários em ações que geram impacto real e duradouro nas comunidades atendidas.</p>
+        </section>
+
+        <section>
+            <h2>Nossas Frentes de Atuação</h2>
+            <span class="badge badge-verde">Alimentação</span>
+            <span class="badge badge-amarelo">Educação</span>
+            <span class="badge badge-azul">Capacitação</span>
+        </section>
+
+        <section>
+            <h2>Avisos</h2>
+            <div class="alerta alerta-sucesso">✅ Cadastro realizado com sucesso!</div>
+            <div class="alerta alerta-info">ℹ️ Novas vagas de voluntariado abertas.</div>
+            <div class="alerta alerta-erro">❌ Preencha todos os campos obrigatórios.</div>
+        </section>
+
+        <section class="doacao">
+            <h2>Faça uma Doação</h2>
+            <p>Sua contribuição transforma vidas. Cada doação fortalece nossas comunidades.</p>
+            <button class="btn" onclick="document.getElementById('modal').style.display='flex'">Quero Doar</button>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="modal" style="display:none;">
+        <div class="modal">
+            <button class="modal-fechar" onclick="document.getElementById('modal').style.display='none'">x</button>
+            <h3>Obrigado pela sua doação!</h3>
+            <p>Sua contribuição transforma vidas. Recebemos seu apoio com muito carinho.</p>
+            <button class="btn" onclick="document.getElementById('modal').style.display='none'">Fechar</button>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Contato</h2>
+        <p>E-mail: contato@amigosdobem.org.br</p>
+        <p>Telefone: (11) 4002-8922</p>
+        <p>Endereço: Rua da Solidariedade, 123 - São Paulo/SP</p>
+        <p>© 2026 ONG Amigos do Bem. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

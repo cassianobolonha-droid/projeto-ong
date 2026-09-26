@@ -1,0 +1,224 @@
+/* ============================================
+   ONG AMIGOS DO BEM - Design System
+   ============================================ */
+:root {
+  --cor-primaria: #2e7d32;
+  --cor-primaria-escura: #1b5e20;
+  --cor-secundaria: #ffb300;
+  --cor-fundo: #f5f5f5;
+  --cor-superficie: #ffffff;
+  --cor-texto: #333333;
+  --cor-texto-suave: #666666;
+  --cor-borda: #cccccc;
+  --cor-erro: #d32f2f;
+  --cor-info: #1976d2;
+  --fonte-titulo-1: 2rem;
+  --fonte-titulo-2: 1.5rem;
+  --fonte-titulo-3: 1.25rem;
+  --fonte-corpo: 1rem;
+  --fonte-legenda: 0.875rem;
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 16px;
+  --espaco-4: 24px;
+  --espaco-5: 40px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-size: var(--fonte-corpo);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--espaco-3);
+  max-width: 1200px;
+  margin: var(--espaco-4) auto;
+  padding: var(--espaco-3);
+  background-color: var(--cor-superficie);
+  border-radius: 8px;
+}
+main > * { grid-column: 1 / 13; }
+
+header {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: var(--espaco-4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espaco-2);
+}
+header h1 { margin: 0; font-size: var(--fonte-titulo-1); }
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+nav a:hover { text-decoration: underline; }
+
+.menu-toggle { display: none; }
+.menu-icone { display: none; }
+.menu { display: flex; gap: 15px; list-style: none; padding: 0; }
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: var(--espaco-3);
+  margin-bottom: var(--espaco-3);
+}
+.cartao h3 { margin: 0; font-size: var(--fonte-titulo-3); }
+.cartao p { text-align: center; color: var(--cor-texto-suave); }
+
+footer {
+  background-color: var(--cor-primaria-escura);
+  color: white;
+  padding: var(--espaco-4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+footer p { margin: 0; }
+
+.doacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  background-color: #e8f5e9;
+  border-radius: 8px;
+  padding: var(--espaco-4);
+}
+
+button, .btn {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--fonte-corpo);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover, .btn:hover { background-color: var(--cor-primaria-escura); }
+button:focus, .btn:focus { outline: 3px solid var(--cor-secundaria); }
+button:active, .btn:active { background-color: #004d40; transform: scale(0.97); }
+button:disabled, .btn:disabled { background-color: var(--cor-borda); cursor: not-allowed; }
+
+fieldset {
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  margin-bottom: var(--espaco-3);
+  padding: var(--espaco-3);
+}
+legend { font-weight: bold; color: var(--cor-primaria); }
+label { display: block; margin-top: var(--espaco-2); }
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: var(--espaco-1);
+  border: 2px solid var(--cor-borda);
+  border-radius: 5px;
+  font-size: var(--fonte-corpo);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+input:valid, select:valid { border-color: var(--cor-primaria); }
+input:invalid, select:invalid { border-color: var(--cor-erro); }
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid var(--cor-secundaria);
+  background-color: #fffde7;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: var(--fonte-legenda);
+  margin-right: 8px;
+}
+.badge-verde { background-color: var(--cor-primaria); }
+.badge-amarelo { background-color: var(--cor-secundaria); color: #333; }
+.badge-azul { background-color: var(--cor-info); }
+
+.alerta {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.alerta-sucesso { background-color: #e8f5e9; color: var(--cor-primaria); border-left: 5px solid var(--cor-primaria); }
+.alerta-info { background-color: #e3f2fd; color: var(--cor-info); border-left: 5px solid var(--cor-info); }
+.alerta-erro { background-color: #ffebee; color: var(--cor-erro); border-left: 5px solid var(--cor-erro); }
+
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.modal-fechar {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  main { grid-template-columns: 1fr; }
+  .menu-icone { display: block; font-size: 28px; cursor: pointer; }
+  .menu { display: none; flex-direction: column; gap: 10px; background-color: var(--cor-primaria-escura); padding: 15px; }
+  .menu-toggle:checked ~ .menu { display: flex; }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  main { grid-template-columns: repeat(2, 1fr); }
+  .menu-icone { display: block; font-size: 28px; cursor: pointer; }
+  .menu { display: none; flex-direction: column; gap: 10px; background-color: var(--cor-primaria-escura); padding: 15px; }
+  .menu-toggle:checked ~ .menu { display: flex; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main { grid-template-columns: repeat(6, 1fr); }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  main { grid-template-columns: repeat(12, 1fr); }
+}
+@media (min-width: 1441px) {
+  main { grid-template-columns: repeat(12, 1fr); max-width: 1400px; margin: 0 auto; }
+}
