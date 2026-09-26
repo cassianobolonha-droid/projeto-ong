@@ -9,23 +9,15 @@
 <body>
     <header>
         <h1>ONG Amigos do Bem</h1>
-        <nav>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-icone">☰</label>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
+        <nav aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html" aria-current="page">Cadastro</a>
         </nav>
     </header>
-
     <main>
-        <h2>Cadastre-se como Doador ou Voluntário</h2>
-
-        <div class="alerta alerta-info">ℹ️ Preencha todos os campos obrigatórios. Os campos corretos ficam com borda verde e os incorretos com borda vermelha.</div>
-
-        <form action="cadastro.html" method="post" novalidate>
+        <h2 id="titulo-cadastro">Cadastre-se como Doador ou Voluntário</h2>
+        <form action="cadastro.html" method="post" novalidate aria-labelledby="titulo-cadastro">
             <fieldset>
                 <legend>Dados Pessoais</legend>
                 <label for="nome">Nome completo</label>
@@ -37,7 +29,6 @@
                 <label for="cpf">CPF</label>
                 <input type="text" id="cpf" name="cpf" maxlength="14" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 000.000.000-00">
             </fieldset>
-
             <fieldset>
                 <legend>Endereço</legend>
                 <label for="cep">CEP</label>
@@ -53,7 +44,6 @@
                     <option value="RJ">Rio de Janeiro</option>
                 </select>
             </fieldset>
-
             <fieldset>
                 <legend>Contato e Colaboração</legend>
                 <label for="telefone">Telefone</label>
@@ -67,28 +57,12 @@
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte como deseja ajudar"></textarea>
             </fieldset>
-
-            <button type="submit" class="btn">Enviar cadastro</button>
+            <button type="submit">Enviar cadastro</button>
         </form>
     </main>
-
-    <div class="modal-overlay" id="modal" style="display:none;">
-        <div class="modal">
-            <button class="modal-fechar" onclick="document.getElementById('modal').style.display='none'">x</button>
-            <h3>Cadastro enviado com sucesso!</h3>
-            <p>Obrigado por se juntar à ONG Amigos do Bem. Em breve entraremos em contato.</p>
-            <button class="btn" onclick="document.getElementById('modal').style.display='none'">Fechar</button>
-        </div>
-    </div>
-
     <footer>
-        <h2>Contato</h2>
-        <p>E-mail: contato@amigosdobem.org.br</p>
-        <p>Telefone: (11) 4002-8922</p>
-        <p>Endereço: Rua da Solidariedade, 123 - São Paulo/SP</p>
         <p>© 2026 ONG Amigos do Bem. Todos os direitos reservados.</p>
     </footer>
-
     <script src="js/mascaras.js"></script>
 </body>
 </html>
