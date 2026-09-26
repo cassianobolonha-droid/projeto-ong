@@ -9,11 +9,11 @@
 <body>
     <header>
         <h1>ONG Amigos do Bem</h1>
-        <nav>
+        <nav aria-label="Menu principal">
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icone">☰</label>
             <ul class="menu">
-                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html" aria-current="page">Início</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
@@ -53,10 +53,10 @@
         </section>
     </main>
 
-    <div class="modal-overlay" id="modal" style="display:none;">
+    <div class="modal-overlay" id="modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
         <div class="modal">
-            <button class="modal-fechar" onclick="document.getElementById('modal').style.display='none'">x</button>
-            <h3>Obrigado pela sua doação!</h3>
+            <button class="modal-fechar" onclick="document.getElementById('modal').style.display='none'" aria-label="Fechar janela">x</button>
+            <h3 id="titulo-modal">Obrigado pela sua doação!</h3>
             <p>Sua contribuição transforma vidas. Recebemos seu apoio com muito carinho.</p>
             <button class="btn" onclick="document.getElementById('modal').style.display='none'">Fechar</button>
         </div>
