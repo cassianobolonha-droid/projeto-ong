@@ -9,62 +9,33 @@
 <body>
     <header>
         <h1>ONG Amigos do Bem</h1>
-        <nav>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-icone">☰</label>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
+        <nav aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="projetos.html" aria-current="page">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
         </nav>
     </header>
-
     <main>
         <h2>Nossas Frentes de Atuação</h2>
-
-        <div class="cartao">
+        <section>
             <h3>Projeto Alimentação</h3>
-            <img src="imagens/projetos.jpg" alt="Voluntários da ONG em ação comunitária">
             <p>Distribuição de cestas básicas e refeições para famílias em situação de insegurança alimentar.</p>
-            <span class="badge badge-verde">Alimentação</span>
-        </div>
-
-        <div class="cartao">
+            <img src="imagens/projetos.jpg" alt="Voluntários da ONG em ação comunitária">
+        </section>
+        <section>
             <h3>Projeto Educação</h3>
             <p>Aulas de reforço escolar e oficinas de capacitação profissional para jovens e adultos.</p>
-            <span class="badge badge-amarelo">Educação</span>
-        </div>
-
-        <div class="cartao">
-            <h3>Projeto Capacitação</h3>
-            <p>Cursos profissionalizantes de marcenaria, serigrafia e panificação para geração de renda.</p>
-            <span class="badge badge-azul">Capacitação</span>
-        </div>
-
+        </section>
         <section>
-            <h2>Como Participar</h2>
-            <div class="alerta alerta-info">ℹ️ Novas vagas de voluntariado abertas!</div>
-            <p><strong>Como ser Voluntário:</strong> Participe das nossas ações presenciais ou remotas. Cadastre-se e escolha a frente de atuação que combina com você.</p>
-            <p><strong>Como Doar:</strong> Contribua com doações financeiras ou de itens. Cada doação transforma vidas e fortalece nossas comunidades.</p>
-            <button class="btn" onclick="document.getElementById('modal').style.display='flex'">Quero Doar</button>
+            <h3>Como ser Voluntário</h3>
+            <p>Participe das nossas ações presenciais ou remotas. Cadastre-se e escolha a frente de atuação que combina com você.</p>
+        </section>
+        <section>
+            <h3>Como Doar</h3>
+            <p>Contribua com doações financeiras ou de itens. Cada doação transforma vidas e fortalece nossas comunidades.</p>
         </section>
     </main>
-
-    <div class="modal-overlay" id="modal" style="display:none;">
-        <div class="modal">
-            <button class="modal-fechar" onclick="document.getElementById('modal').style.display='none'">x</button>
-            <h3>Obrigado pela sua doação!</h3>
-            <p>Sua contribuição transforma vidas. Recebemos seu apoio com muito carinho.</p>
-            <button class="btn" onclick="document.getElementById('modal').style.display='none'">Fechar</button>
-        </div>
-    </div>
-
     <footer>
-        <h2>Contato</h2>
-        <p>E-mail: contato@amigosdobem.org.br</p>
-        <p>Telefone: (11) 4002-8922</p>
-        <p>Endereço: Rua da Solidariedade, 123 - São Paulo/SP</p>
         <p>© 2026 ONG Amigos do Bem. Todos os direitos reservados.</p>
     </footer>
 </body>
